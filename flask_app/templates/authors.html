@@ -23,7 +23,7 @@
         <div class="container m-2">
             <h3>All Authors</h3>
             {% for author in authors %}
-                <p>{{ author.name }}</p>
+                <a href="/one_author" class="d-block text-success">{{ author.name }}</a>
             {% endfor %}
             <div class="mt-2">
                 <a href="/go-add-book" class="btn btn-dark text-success">Add Book</a>

@@ -17,3 +17,16 @@ def create_author():
     }
     Author.save_author(data)
     return redirect('/')
+
+@app.route('/one_author')
+def go_to_author():
+    return render_template('one_author.html',user="Bill", book = "How to Be a Baw", number = 900)
+
+@app.route('/add_author_favotite', methods = ["POST"])
+def add_author_favorite():
+    data = {
+        "author_id": request.form['author_id'], 
+        "book_id": request.form['book_id']
+    }
+    Author.save_author_favorite(data)
+    return redirect('/one-author')
