@@ -26,9 +26,10 @@
             </form>
         </div>
         <div class="container m-2">
-            <h3>All Books</h3>
-            <p>Harry Potter</p>
-            <p>Back Then</p>
+                <h3>All Books</h3>
+                {% for book in books%}
+                    <a href="" class="text-success d-block">{{ book.title }}</a>
+                {% endfor %}
         </div>
     </div>
     
